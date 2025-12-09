@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECERCA Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+    <div class="logo-container">
+        <img src="img/hero-bg.jpeg" alt="Logo Secerca">
+        <h1>SECERCA.CO</h1>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+</header>
+
+
+
+
+
+    <section class="hero">
+    <h2>Hallo #wargasecerca</h2>
+    <p>Buka Setiap Hari | 08.00 – 22.00</p>
+    <button>Pesan Sekarang</button>
+</section>
+
+    
+   <section class="menu-section">
+    <h2>Menu</h2>
+
+    <div class="menu-grid">
+
+        <!-- CARD ITEM -->
+        <div class="menu-card" onclick="openDetail('Espresso', 'Kopi hitam dengan rasa kuat', 'img/espresso.jpg', 'Rp 15.000')">
+            <img src="img/espresso.jpg" alt="">
+            <h4>Espresso</h4>
+        </div>
+
+        <div class="menu-card" onclick="openDetail('Cappuccino', 'Perpaduan espresso dan susu', 'img/cappuccino.jpg', 'Rp 22.000')">
+            <img src="img/cappuccino.jpg" alt="">
+            <h4>Cappuccino</h4>
+        </div>
+
+        <div class="menu-card" onclick="openDetail('Latte', 'Kopi susu lembut dan creamy', 'img/mocha.jpg', 'Rp 24.000')">
+            <img src="img/mocha.jpg" alt="">
+            <h4>Latte</h4>
+        </div>
+
+    </div>
+</section>
+
+<!-- POPUP DETAIL -->
+<div id="popupDetail" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeDetail()">&times;</span>
+        <img id="popupImg" src="" alt="">
+        <h3 id="popupTitle"></h3>
+        <p id="popupDesc"></p>
+        <h4 id="popupPrice"></h4>
+    </div>
+</div>
+
+
+
+    <section id="about" class="about">
+        <h2>Tentang SECERCA</h2>
+<p>Lahir pada Oktober 2023, Toko Kopi Secerca menjadi salah satu coffee shop lokal
+memperkenalkan beberapa varian menu ber-basis Espresso. Kata “Lokal” dibarengi dengan
+dikenalkannya biji kopi khas unggulan Indonesia yaitu Biji Kopi Arabika Gayo, Sumatera dan
+Robusta Temanggung, Jawa Tengah.
+Apa itu “Secerca”?
+Kata Secerca sebenarnya diambil dari kata “Secercah” atau “Cercah” yang berarti sinar kecil
+atau kilau lemah dari sebuah cahaya. Makna kiasannya seperti sedikit harapan, semangat atau
+kebahagian, contoh: “Ia masih menyimpan secercah harapan untuk sembuh”.</p>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <h2>Kontak Kami</h2>
+        <p>Alamat: Jl. Raya Kopi No. 12, Indonesia</p>
+        <p>WhatsApp: 0812-3456-7890</p>
+        <p>Instagram: @seceracoffee</p>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 SECERCA Coffee Shop. All Rights Reserved.</p>
+    </footer>
+<script>
+function openDetail(title, desc, img, price) {
+    document.getElementById("popupTitle").innerHTML = title;
+    document.getElementById("popupDesc").innerHTML = desc;
+    document.getElementById("popupImg").src = img;
+    document.getElementById("popupPrice").innerHTML = price;
+    document.getElementById("popupDetail").style.display = "flex";
+}
+
+function closeDetail() {
+    document.getElementById("popupDetail").style.display = "none";
+}
+</script>
+
+
+
+</body>
+</html>

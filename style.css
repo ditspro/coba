@@ -1,0 +1,202 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --primary: #1C7464;   /* warna hijau teal dari logo */
+    --light: #ffffff;
+    --dark: #1a1a1a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: var(--light);
+    border-bottom: 2px solid var(--primary);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img {
+    height: 55px;
+}
+
+nav a {
+    color: var(--primary);
+    font-weight: 600;
+    margin-left: 22px;
+    text-decoration: none;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 6px #000;
+  position: relative;
+}
+
+.hero button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4); /* intensitas gelap */
+}
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+.about, .menu, .contact {
+    padding: 60px;
+    text-align: center;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 25px;
+}
+
+.item {
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    width: 180px;
+}
+.menu-section {
+    text-align: center;
+    padding: 30px;
+}
+
+/* GRID MENU */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 18px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* CARD DIPERPANJANG */
+.menu-card {
+    width: 250px;
+    height: 290px;    /* <-- dipanjangin */
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.25s;
+    box-shadow: 0 4px 10px rgba(55, 151, 58, 0.25);
+    position: relative;
+}
+
+
+
+/* GAMBAR BAGIAN ATAS, 70% AREA */
+.menu-card img {
+    width: 100%;
+    height: 260px;   /* <-- bagian gambar lebih tinggi */
+    object-fit: cover;
+}
+
+/* TEXT NAMA MENU */
+.menu-card h4 {
+    background: rgba(0,0,0,0.65);
+    color: white;
+    font-size: 15px;
+    padding: 6px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.close:hover {
+    color: red;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0;} to {opacity: 1;}
+}
+@keyframes zoomIn {
+    from {transform: scale(0.7);} to {transform: scale(1);}
+}
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #2c2c2c;
+    color: white;
+}
